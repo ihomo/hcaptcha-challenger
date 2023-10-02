@@ -184,7 +184,7 @@ def create_comment(asset: GitReleaseAsset, gravitas: Gravitas, gs: GravitasState
 
 def load_gravitas_from_issues() -> List[Gravitas]:
     auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
-    issue_repo = Github(auth=auth).get_repo("QIN2DIM/hcaptcha-challenger")
+    issue_repo = Github(auth=auth).get_repo("ihomo/hcaptcha-challenger")
 
     tasks = []
     for issue in issue_repo.get_issues(
