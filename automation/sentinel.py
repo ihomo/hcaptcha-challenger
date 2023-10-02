@@ -78,9 +78,9 @@ class Pigeon:
 
     def __post_init__(self):
         auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
-        self.issue_repo = Github(auth=auth).get_repo("QIN2DIM/hcaptcha-challenger")
+        self.issue_repo = Github(auth=auth).get_repo("ihomo/hcaptcha-challenger")
         # self.issue_repo = Github(auth=auth).get_repo("QIN2DIM/cdn-relay")
-        self.asset_repo = Github(auth=auth).get_repo("QIN2DIM/cdn-relay")
+        self.asset_repo = Github(auth=auth).get_repo("ihomo/cdn-relay")
 
         self.request_type = self.qr.request_type
         if shape_type := self.qr.request_config.get("shape_type"):
@@ -97,7 +97,7 @@ class Pigeon:
 
         self.issue_labels = ["🔥 challenge"]
         self.issue_post_label = "🏹 ci: sentinel"
-        self.assignees = ["QIN2DIM"]
+        self.assignees = ["ihomo"]
 
     @classmethod
     def build(cls, label, qr, sitekey, canvas_path):

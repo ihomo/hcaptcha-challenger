@@ -141,7 +141,7 @@ class GravitasState:
 
 def upload_thumbnail(canvas_path: Path, mixed_label: str) -> str | None:
     auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
-    asset_repo = Github(auth=auth).get_repo("QIN2DIM/cdn-relay")
+    asset_repo = Github(auth=auth).get_repo("ihomo/cdn-relay")
 
     asset_path = f"challenge-thumbnail/{time.time()}.{mixed_label}.png"
     branch = "main"
