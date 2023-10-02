@@ -203,8 +203,8 @@ def get_archive_release() -> GitRelease:
     auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
     archive_release = (
         Github(auth=auth)
-        .get_repo("captcha-challenger/hcaptcha-whistleblower")
-        .get_release(120534711)
+        .get_repo("ihomo/hcaptcha-whistleblower")
+        .get_release("automation-archive")
     )
     return archive_release
 
